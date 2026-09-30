@@ -10,6 +10,20 @@
   <!-- Navigation Header -->
   <header class="navbar">
     <a href="../index.html" class="nav-brand">⚡ TraceDSA</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="arrays.html" class="active">Arrays</a></li>
+        <li><a href="strings.html">Strings</a></li>
+        <li><a href="linkedlist.html">Linked List</a></li>
+        <li><a href="stack.html">Stack</a></li>
+        <li><a href="queue.html">Queue</a></li>
+        <li><a href="twopointers.html">Two Pointers</a></li>
+        <li><a href="slidingwindow.html">Sliding Window</a></li>
+        <li><a href="searching.html">Searching</a></li>
+        <li><a href="sorting.html">Sorting</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="container">
@@ -57,7 +71,25 @@
       <!-- Array boxes rendered dynamically here -->
     </div>
 
-   
+    <!-- Step Info & Complexity -->
+    <div class="info-grid">
+      <div class="step-card">
+        <h4>Current Step Explanation</h4>
+        <div class="step-text" id="stepInfo">Click <strong>Start</strong> to begin stepping through the algorithm.</div>
+        <div id="resultInfo" class="result-badge" style="display: none;"></div>
+      </div>
+
+      <div class="complexity-card">
+        <div class="comp-item">
+          <span>Time Complexity:</span>
+          <span class="comp-badge" id="timeComp">O(N)</span>
+        </div>
+        <div class="comp-item">
+          <span>Space Complexity:</span>
+          <span class="comp-badge" id="spaceComp">O(1)</span>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>

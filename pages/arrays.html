@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Visualizer - TraceDSA</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <a href="../index.html" class="nav-brand">⚡ TraceDSA</a>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Array Visualizer</h1>
+      <p>Explore basic array operations and algorithms step-by-step.</p>
+    </div>
+
+    <!-- Inputs & Operation Selection -->
+    <div class="card input-section">
+      <div class="form-group">
+        <label for="problemSelect">Choose Problem:</label>
+        <select id="problemSelect">
+          <option value="traversal">1. Array Traversal (Loop)</option>
+          <option value="reverse">2. Reverse Array</option>
+          <option value="palindrome">3. Palindrome Array</option>
+          <option value="maxElement">4. Find Maximum Element</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="arrayInput">Array Elements:</label>
+        <input type="text" id="arrayInput" value="10, 20, 30, 40, 50" placeholder="e.g. 10, 20, 30, 40, 50">
+        <button class="btn btn-secondary" id="btnLoad">Load</button>
+      </div>
+    </div>
+
+    <!-- Controls Bar -->
+    <div class="card controls-section">
+      <div class="btn-group">
+        <button class="btn btn-primary" id="btnStart">Start</button>
+        <button class="btn btn-secondary" id="btnPause" disabled>Pause</button>
+        <button class="btn btn-danger" id="btnReset">Reset</button>
+      </div>
+
+      <div class="speed-control">
+        <label for="speedSlider">Speed:</label>
+        <input type="range" id="speedSlider" min="1" max="3" value="2" step="1">
+        <span>(Slow / Med / Fast)</span>
+      </div>
+    </div>
+
+    <!-- Visualization Canvas -->
+    <div class="canvas-area" id="canvasArea">
+      <!-- Array boxes rendered dynamically here -->
+    </div>
+
+   
+  </main>
+
+  <footer>
+    <p>TraceDSA &bull; Array Module</p>
+  </footer>
+</body>
+</html>

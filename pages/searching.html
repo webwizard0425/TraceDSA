@@ -12,7 +12,7 @@
     <nav>
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
-     
+       
       </ul>
     </nav>
   </header>
@@ -57,7 +57,29 @@
         <span>(Slow / Med / Fast)</span>
       </div>
     </div>
-   
+
+    <div class="canvas-area" id="canvasArea">
+      <!-- Search visualization canvas -->
+    </div>
+
+    <div class="info-grid">
+      <div class="step-card">
+        <h4>Current Step Explanation</h4>
+        <div class="step-text" id="stepInfo">Click <strong>Start</strong> to search for the target.</div>
+        <div id="resultInfo" class="result-badge" style="display: none;"></div>
+      </div>
+
+      <div class="complexity-card">
+        <div class="comp-item">
+          <span>Time Complexity:</span>
+          <span class="comp-badge" id="timeComp">O(N)</span>
+        </div>
+        <div class="comp-item">
+          <span>Space Complexity:</span>
+          <span class="comp-badge" id="spaceComp">O(1)</span>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>

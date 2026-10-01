@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Searching Visualizer - TraceDSA</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="../index.html" class="nav-brand">⚡ TraceDSA</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+     
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Searching Algorithms Visualizer</h1>
+      <p>Compare sequential Linear Search vs divide-and-conquer Binary Search with <code>low</code>, <code>mid</code>, and <code>high</code> pointers.</p>
+    </div>
+
+    <div class="card input-section">
+      <div class="form-group">
+        <label for="algorithmSelect">Algorithm:</label>
+        <select id="algorithmSelect">
+          <option value="linear">1. Linear Search</option>
+          <option value="binary">2. Binary Search (Sorted Array)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="targetInput">Search Target:</label>
+        <input type="number" id="targetInput" value="35" style="width: 80px;">
+      </div>
+
+      <div class="form-group">
+        <label for="arrayInput">Array:</label>
+        <input type="text" id="arrayInput" value="10, 20, 28, 35, 42, 58, 70" placeholder="e.g. 10, 20, 35, 42">
+        <button class="btn btn-secondary" id="btnLoad">Load</button>
+      </div>
+    </div>
+
+    <div class="card controls-section">
+      <div class="btn-group">
+        <button class="btn btn-primary" id="btnStart">Start</button>
+        <button class="btn btn-secondary" id="btnPause" disabled>Pause</button>
+        <button class="btn btn-danger" id="btnReset">Reset</button>
+      </div>
+
+      <div class="speed-control">
+        <label for="speedSlider">Speed:</label>
+        <input type="range" id="speedSlider" min="1" max="3" value="2" step="1">
+        <span>(Slow / Med / Fast)</span>
+      </div>
+    </div>
+   
+  </main>
+
+  <footer>
+    <p>TraceDSA &bull; Searching Module</p>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/searching.js"></script>
+</body>
+</html>

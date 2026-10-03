@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Pointers Pattern - TraceDSA</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="../index.html" class="nav-brand">⚡ TraceDSA</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="arrays.html">Arrays</a></li>
+        <li><a href="strings.html">Strings</a></li>
+        <li><a href="linkedlist.html">Linked List</a></li>
+        <li><a href="stack.html">Stack</a></li>
+        <li><a href="queue.html">Queue</a></li>
+        <li><a href="twopointers.html" class="active">Two Pointers</a></li>
+        <li><a href="slidingwindow.html">Sliding Window</a></li>
+        <li><a href="searching.html">Searching</a></li>
+        <li><a href="sorting.html">Sorting</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Two Pointers Pattern Visualizer</h1>
+      <p>Observe two pointers (<code>left</code> and <code>right</code>) traversing an array to solve problems in O(N) time.</p>
+    </div>
+
+    <div class="card input-section">
+      <div class="form-group">
+        <label for="problemSelect">Choose Problem:</label>
+        <select id="problemSelect">
+          <option value="twosum">1. Two Sum (Sorted Array)</option>
+          <option value="reverse">2. Reverse Array</option>
+          <option value="palindrome">3. Palindrome Check</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="targetGroup">
+        <label for="targetInput">Target Sum:</label>
+        <input type="number" id="targetInput" value="14" style="width: 80px;">
+      </div>
+
+      <div class="form-group">
+        <label for="arrayInput">Array:</label>
+        <input type="text" id="arrayInput" value="1, 3, 4, 6, 8, 11, 15" placeholder="sorted numbers">
+        <button class="btn btn-secondary" id="btnLoad">Load</button>
+      </div>
+    </div>
+
+    <div class="card controls-section">
+      <div class="btn-group">
+        <button class="btn btn-primary" id="btnStart">Start</button>
+        <button class="btn btn-secondary" id="btnPause" disabled>Pause</button>
+        <button class="btn btn-danger" id="btnReset">Reset</button>
+      </div>
+
+      <div class="speed-control">
+        <label for="speedSlider">Speed:</label>
+        <input type="range" id="speedSlider" min="1" max="3" value="2" step="1">
+        <span>(Slow / Med / Fast)</span>
+      </div>
+    </div>
+
+    <div class="canvas-area" id="canvasArea">
+      <!-- Array with left & right pointers -->
+    </div>
+
+    <div class="info-grid">
+      <div class="step-card">
+        <h4>Current Step Explanation</h4>
+        <div class="step-text" id="stepInfo">Click <strong>Start</strong> to watch left and right pointers converge.</div>
+        <div id="resultInfo" class="result-badge" style="display: none;"></div>
+      </div>
+
+      <div class="complexity-card">
+        <div class="comp-item">
+          <span>Time Complexity:</span>
+          <span class="comp-badge" id="timeComp">O(N)</span>
+        </div>
+        <div class="comp-item">
+          <span>Space Complexity:</span>
+          <span class="comp-badge" id="spaceComp">O(1)</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>TraceDSA &bull; Two Pointers Module</p>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/twopointers.js"></script>
+</body>
+</html>

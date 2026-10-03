@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stack Visualizer - TraceDSA</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="../index.html" class="nav-brand">⚡ TraceDSA</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="arrays.html">Arrays</a></li>
+        <li><a href="strings.html">Strings</a></li>
+        <li><a href="linkedlist.html">Linked List</a></li>
+        <li><a href="stack.html" class="active">Stack</a></li>
+        <li><a href="queue.html">Queue</a></li>
+        <li><a href="twopointers.html">Two Pointers</a></li>
+        <li><a href="slidingwindow.html">Sliding Window</a></li>
+        <li><a href="searching.html">Searching</a></li>
+        <li><a href="sorting.html">Sorting</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Stack Visualizer (LIFO)</h1>
+      <p>A Stack is a Last-In, First-Out data structure. Observe elements placed and removed from the TOP.</p>
+    </div>
+
+    <!-- Operations & Input -->
+    <div class="card input-section">
+      <div class="form-group">
+        <label for="stackItemInput">Element:</label>
+        <input type="number" id="stackItemInput" value="50" style="width: 90px;" placeholder="val">
+        <button class="btn btn-primary" id="btnPush">Push</button>
+        <button class="btn btn-secondary" id="btnPop">Pop</button>
+        <button class="btn btn-secondary" id="btnPeek">Peek</button>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary" id="btnStartDemo">Run Full Demo</button>
+        <button class="btn btn-danger" id="btnClearStack">Clear</button>
+      </div>
+    </div>
+
+    <div class="card controls-section">
+      <div class="btn-group">
+        <span style="font-weight: 600; font-size: 0.9rem; color: var(--text-muted);">Interactive Operations: Click Push / Pop / Peek above, or Run Full Demo</span>
+      </div>
+
+      <div class="speed-control">
+        <label for="speedSlider">Speed:</label>
+        <input type="range" id="speedSlider" min="1" max="3" value="2" step="1">
+        <span>(Slow / Med / Fast)</span>
+      </div>
+    </div>
+
+    <!-- Canvas area with vertical container -->
+    <div class="canvas-area" id="canvasArea" style="min-height: 280px;">
+      <!-- Stack container rendered here -->
+    </div>
+
+    <div class="info-grid">
+      <div class="step-card">
+        <h4>Current Step Explanation</h4>
+        <div class="step-text" id="stepInfo">Perform an operation (Push, Pop, Peek) or click <strong>Run Full Demo</strong>.</div>
+        <div id="resultInfo" class="result-badge" style="display: none;"></div>
+      </div>
+
+      <div class="complexity-card">
+        <div class="comp-item">
+          <span>Push / Pop / Peek:</span>
+          <span class="comp-badge">O(1)</span>
+        </div>
+        <div class="comp-item">
+          <span>Space Complexity:</span>
+          <span class="comp-badge">O(N)</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>TraceDSA &bull; Stack Module</p>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/stack.js"></script>
+</body>
+</html>

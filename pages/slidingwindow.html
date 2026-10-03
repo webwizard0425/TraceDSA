@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sliding Window Pattern - TraceDSA</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="../index.html" class="nav-brand">⚡ TraceDSA</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="arrays.html">Arrays</a></li>
+        <li><a href="strings.html">Strings</a></li>
+        <li><a href="linkedlist.html">Linked List</a></li>
+        <li><a href="stack.html">Stack</a></li>
+        <li><a href="queue.html">Queue</a></li>
+        <li><a href="twopointers.html">Two Pointers</a></li>
+        <li><a href="slidingwindow.html" class="active">Sliding Window</a></li>
+        <li><a href="searching.html">Searching</a></li>
+        <li><a href="sorting.html">Sorting</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Sliding Window Pattern Visualizer</h1>
+      <p>Visualize fixed-size window slide to compute the Maximum Sum Subarray of size K in O(N) linear time.</p>
+    </div>
+
+    <div class="card input-section">
+      <div class="form-group">
+        <label for="kInput">Window Size (K):</label>
+        <input type="number" id="kInput" value="3" min="1" max="6" style="width: 70px;">
+      </div>
+
+      <div class="form-group">
+        <label for="arrayInput">Array Elements:</label>
+        <input type="text" id="arrayInput" value="2, 1, 5, 1, 3, 2" placeholder="e.g. 2, 1, 5, 1, 3, 2">
+        <button class="btn btn-secondary" id="btnLoad">Load</button>
+      </div>
+    </div>
+
+    <div class="card controls-section">
+      <div class="btn-group">
+        <button class="btn btn-primary" id="btnStart">Start</button>
+        <button class="btn btn-secondary" id="btnPause" disabled>Pause</button>
+        <button class="btn btn-danger" id="btnReset">Reset</button>
+      </div>
+
+      <div class="speed-control">
+        <label for="speedSlider">Speed:</label>
+        <input type="range" id="speedSlider" min="1" max="3" value="2" step="1">
+        <span>(Slow / Med / Fast)</span>
+      </div>
+    </div>
+
+    <div class="canvas-area" id="canvasArea">
+      <!-- Array with window frame and running sum -->
+    </div>
+
+    <div class="info-grid">
+      <div class="step-card">
+        <h4>Current Step Explanation</h4>
+        <div class="step-text" id="stepInfo">Click <strong>Start</strong> to begin sliding the window of size K.</div>
+        <div id="resultInfo" class="result-badge" style="display: none;"></div>
+      </div>
+
+      <div class="complexity-card">
+        <div class="comp-item">
+          <span>Time Complexity:</span>
+          <span class="comp-badge" id="timeComp">O(N)</span>
+        </div>
+        <div class="comp-item">
+          <span>Space Complexity:</span>
+          <span class="comp-badge" id="spaceComp">O(1)</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>TraceDSA &bull; Sliding Window Module</p>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/slidingwindow.js"></script>
+</body>
+</html>
